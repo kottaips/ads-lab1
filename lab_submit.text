@@ -1,0 +1,114 @@
+Applications of DFS: 
+Depth-First Search (DFS) is a graph traversal algorithm that explores as deeply as possible along each branch before backtracking. It has a wide range of applications in various fields, including:   
+
+Computer Science:
+
+1.Topological sorting: DFS can be used to determine the order in which tasks or activities must be completed in a directed acyclic graph (DAG).
+2.Strongly connected components: DFS can be used to identify strongly connected components within a directed graph.
+3.Cycle detection: DFS can be used to detect cycles in a graph.
+4.Maze solving: DFS can be used to find a path through a maze or labyrinth.
+5.Game theory: DFS can be used to explore game trees and find optimal strategies.
+6.Artificial Intelligence:Search algorithms: DFS can be used as a search algorithm to find solutions to problems, such as solving puzzles or planning routes.
+7.Machine learning: DFS can be used to explore decision trees and build classification models.
+8.Network Analysis:Network traversal: DFS can be used to explore networks and identify connected components.
+9.Shortest path algorithms: DFS can be used as a building block for shortest path algorithms, such as Dijkstra's algorithm.
+10.Other Applications:
+
+-Web crawling: DFS can be used to crawl websites and index web pages.
+-Data analysis: DFS can be used to analyze data structures and identify patterns.
+-Robotics: DFS can be used to plan paths for robots and navigate complex environments
+
+***CODE*** 
+
+class trees():
+    def __init__(self,data):
+        self.data=data
+        self.left=None
+        self.right=None
+def create():
+    root=trees(1)
+    nodeA=trees(2)
+    nodeB=trees(3)
+    nodeC=trees(4)
+    nodeD=trees(5)
+    nodeE=trees(6)
+    nodeF=trees(7)
+    nodeG=trees(8)
+    nodeH=trees(9)
+    nodeI=trees(10)
+    nodeJ=trees(11)
+    nodeK=trees(12)
+    nodeL=trees(13)
+    nodeM=trees(14)
+    nodeN=trees(15)
+    nodeO=trees(16)
+    nodeP=trees(17)
+    nodeQ=trees(18)
+    nodeR=trees(19)
+    nodeS=trees(20)
+
+    root.left=nodeA
+    root.right=nodeB
+
+
+    nodeA.right=nodeD
+    nodeA.left=nodeC
+
+    nodeC.left=nodeE
+    nodeC.right=nodeF
+
+    nodeF.left=nodeG
+    nodeF.right=nodeH
+
+    nodeD.left=nodeI
+    nodeD.right=nodeJ
+
+    nodeJ.left=nodeK
+
+    nodeB.left=nodeL
+    nodeB.right=nodeM
+
+    nodeM.left=nodeQ
+    nodeM.right=nodeR
+
+    nodeR.left=nodeS
+
+    nodeL.left=nodeN
+
+    nodeN.left=nodeO
+    nodeN.right=nodeP
+    return root
+    
+    
+a=create()
+def preorder(root):
+    if not root :
+        return
+    print(root.data,end=" ")
+    preorder(root.left)
+    preorder(root.right)
+
+def inorder(root):
+    if not root:
+        return 
+    inorder(root.left)
+    print(root.data,end=" ")
+    inorder(root.right)
+    
+    
+def postorder(root):
+    if not root :
+        return 
+    postorder(root.left)
+    postorder(root.right)
+    print(root.data,end=" ")
+    
+print("All dfs applications")
+print("preorder")    
+preorder(a)
+print("\n")
+print("inorder")
+inorder(a)
+print("\n")
+print("postorder")
+postorder(a) 
